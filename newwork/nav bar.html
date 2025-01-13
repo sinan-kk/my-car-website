@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav bar.css">
+</head>
+<body>
+    <nav class="container-fluid">
+        <div class="logo">WORLD CARS</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="web1.html" style="color: rgb(201, 26, 26);">Home</a></li>
+            <li><a href="web about.html" target="_self">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#finance">Finance</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="/image 2/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com/@X"><img src="/image 2/X-Logo.png" alt="X"></a>
+            <a href="https://www.instagram.com"><img src="/image 2/insta.png" alt="Instagram"></a>
+        </div>
+    </nav>
+  
+      <div class="home">
+          <div class="card" id="card-1">
+              <div class="card-body">
+                  <h1>Car Dealing Experience</h1>
+                  <h5 class="card-title">Redefined!</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur neque adipisci, ullam harum asperiores ipsa, cupiditate iste sunt, mollitia reiciendis necessitatibus provident consectetur similique. Consequuntur perspiciatis veniam adipisci minus illum.</p>
+                  <a href="#" class="btn btn-primary">Experience More</a>
+              </div>
+          </div>
+          <div class="home-image">
+            <div class="back">
+              <img src="/image 2/file.png" alt="">
+            </div>
+          </div>
+          <div class="back2"></div>
+      </div>
+      <!-- .............................................................. -->
+       <div class="learn">
+          <h5>Learn Everything About <br> BMW Here</h5>
+       </div>
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+        
+    </script>
+</body>
+</html>

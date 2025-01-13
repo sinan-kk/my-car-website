@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web1.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="webmore.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- .............nav bar........ -->
+    <nav class="container-fluid">
+        <div class="logo">WORLD CARS</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰
+          <div class="open">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+              </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="web1.html">Home</a></li>
+            <li><a href="web about.html" target="_self">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+        <a href="https://www.facebook.com/BMW/"><img src="/image 2/fb.png" alt="Facebook"></a>
+          <a href="https://x.com/BMW"><img src="/image 2/X-Logo.png" alt="X"></a>
+          <a href="https://www.instagram.com/bmw/"><img src="/image 2/insta.png" alt="Instagram"></a>
+        </div>   
+    </nav>
+
+    <!-- -------------------------contact main------------------------------- -->
+    <div class="contact-head">
+        <h1>Contact.</h1>
+    </div>
+    <section class="contact">
+        <p>We will be pleased to help you. For a fast and targeted answer, please select the subject of your interest.</p>
+
+        <div class="faq">
+            <h2>What is your request about?</h2>
+            <button class="accordion">Vehicles</button>
+            <button class="accordion">Financial & Mobility Services</button>
+            <button class="accordion">Company</button>
+            <button id="openAll">Open all</button>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact form for all other inquiries</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c875496c-e7a5-4355-9eb0-4af6a1a6af90">
+
+
+                <label for="subject">Subject: </label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Your message: </label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="website">If applicable, URL of the website (optional):</label>
+                <input type="url" id="website" name="website">
+
+                <label for="country">Your country/region: *</label>
+                <select id="country" name="country" required>
+                    <option value="">-- please select --</option>
+                    <option value="india">india</option>
+                    <option value="pakistan">pakistan</option>
+                    <option value="usa">usa</option>
+                    <option value="russia">russia</option>
+                    <!-- Add countries as needed -->
+                </select>
+
+                <label for="email">Your e-mail address: </label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="addresses">
+            <div class="address">
+                <h3>Postal Address</h3>
+                <p>Mercedes-Benz Group AG<br>70546 Stuttgart<br>Germany</p>
+                <p>Phone: <a href="tel:+49711170">+49 711 17 0</a></p>
+            </div>
+            <div class="address">
+                <h3>Visitors' Address</h3>
+                <p>Mercedes-Benz Group AG<br>Corporate Headquarters<br>Mercedesstraße 120<br>70372 Stuttgart<br>Germany</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-----------------------------footer------------------------------->
+    <div class="main-footer">
+        <footer class="footer">
+          <div class="footer-container">
+              <div class="footer-column">
+                  <h3>Models</h3>
+                  <ul>
+                      <li><a href="#">All Models</a></li>
+                      <li><a href="#">Model price list</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h3>Used Cars</h3>
+                  <ul>
+                      <li><a href="#">BMW Approved Plus</a></li>
+                      <li><a href="#">Dealer Locator</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h3>Customer Area</h3>
+                  <ul>
+                      <li><a href="#">BMW Owners</a></li>
+                      <li><a href="#">BMW Service</a></li>
+                      <li><a href="#">myBMW Connect</a></li>
+                      <li><a href="#">BMW Club Rewards</a></li>
+                      <li><a href="#">BMW Concierge</a></li>
+                      <li><a href="#">Sustainability</a></li>
+                      <li><a href="#">Discover BMW from Home</a></li>
+                      <li><a href="#">Book a test drive</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h3>Innovation</h3>
+                  <ul>
+                      <li><a href="#">BMW RS e-tron GT</a></li>
+                      <li><a href="#">BMW e-tron GT</a></li>
+                      <li><a href="#">BMW e-tron hub</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h3>Support</h3>
+                  <ul>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Press</a></li>
+                      <li><a href="#">BMW Shop</a></li>
+                      <li><a href="#">Imprint</a></li>
+                      <li><a href="#">Corporate Governance</a></li>
+                      <li><a href="#">Contact / Newsletter</a></li>
+                  </ul>
+              </div>
+          </div>
+        </footer>
+       </div>
+    
+
+
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('open');
+      }
+    </script>
+</body>
+</html>

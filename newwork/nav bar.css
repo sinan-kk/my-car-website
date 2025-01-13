@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: transparent;
+    border: none;
+    position: relative; /* Ensure navbar doesn't overlap other content */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Center vertically */
+    position: absolute; /* Position it absolutely to slide it from the right */
+    top: 60px; /* Adjust based on the height of the navbar */
+    right: 0;
+    background-color: #fff;
+    height: 100vh; /* Full height of the viewport */
+    width: 300px; /* Adjust based on your preference */
+    transform: translateX(100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+    overflow-y: auto; /* Scrollable if content exceeds viewport height */
+}
+
+.nav-links.open {
+    transform: translateX(0); /* Slide in from the right */
+}
+
+.nav-links li {
+    text-align: center;
+    padding: 20px 0; /* Adjust padding */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    margin-right: 30px;
+    background-color: transparent;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-icons a:hover {
+    box-shadow: 4px 4px 5px #eeeff0;
+}
+
+.menu-icon {
+    color: #000;
+    font-size: 30px;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .social-icons {
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ............................................... */
+.home {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 5% 0;
+    overflow: hidden;
+    position: relative; /* Ensure this section respects other content */
+    z-index: 1; /* Make sure it is below the navbar */
+}
+
+#card-1 {
+    border: none;
+    max-width: 630px;
+    padding-top: 70px;
+}
+
+#card-1 h1 {
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#card-1 h5 {
+    color: rgb(215, 25, 25);
+    font-size: 35px;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#card-1 p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+#card-1 a {
+    font-weight: 600;
+    background-color: rgb(175, 21, 21);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#card-1 a:hover {
+    color: #0c0c0c;
+    background-color: #fff;
+}
+
+.home-image {
+    position: relative;
+    right: -40px;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(252, 248, 242);
+    border: 25px solid rgb(16, 15, 15);
+    opacity: 0;
+    animation: out 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.home-image .back img {
+    position: absolute;
+    max-width: 750px;
+    transform: rotate(-45deg);
+    left: -250px;
+    top: 50px;
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home .back2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    z-index: -1;
+    width: 700px;
+    height: 700px;
+    background-color: rgb(164, 19, 19);
+    transform: rotate(45deg);
+}
+
+
+/* .home {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 5% 0;
+    overflow: hidden;
+    
+    
+}
+
+#card-1 {
+    border: none;
+    max-width: 630px;
+    padding-top: 70px;
+}
+
+#card-1 h1 {
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#card-1 h5 {
+    color: rgb(215, 25, 25);
+    font-size: 35px;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#card-1 p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+#card-1 a {
+    font-weight: 600;
+    background-color: rgb(175, 21, 21);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#card-1 a:hover {
+    color: #0c0c0c;
+    background-color: #fff;
+}
+
+.home-image {
+    position: relative;
+    right: -40px;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(252, 248, 242);
+    border: 25px solid rgb(16, 15, 15);
+    opacity: 0;
+    animation: out 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.home-image .back img {
+    position: absolute;
+    max-width: 750px;
+    transform: rotate(-45deg);
+    left: -250px;
+    top: 50px;
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home .back2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    z-index: -1;
+    width: 700px;
+    height: 700px;
+    background-color: rgb(164, 19, 19);
+    transform: rotate(45deg);
+}
+@media screen and (max-width:800px){
+    .home-image{
+        display: none;
+    }
+    .home{
+        position: relative;
+        padding: 80px 5% 0;
+        top: 0; /* Adjusted top positioning */
+        /* flex-direction: column;
+        align-items: center;
+    }
+  
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */ 
